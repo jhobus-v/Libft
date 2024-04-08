@@ -10,24 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
+#include <stddef.h>
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	peido;
+	size_t	gugu;
 
-	peido = 0;
-	while (peido < n)
+	gugu = 0;
+	unsigned char *p = s;
+	while (gugu < n && p[gugu] != '\0')
 	{
-		*(unsigned char*)(s + peido) = (unsigned char)c;
-		peido++;
+		p[gugu] = (unsigned char)c;
+		gugu++;
 	}
-	return (s);
+	return (p);
 }
 
 int	main(void)
 {
-	char *s = "peidoherro";
-	ft_memset(s, 'y', 6);
-	printf("%s", s);
+	char	p[] = "peidasso";
+	ft_memset(p, 'j', 5);
+	printf("%c", p);
 	return (0);
 }
