@@ -30,6 +30,6 @@ int	main(void)
 {
 	char	p[] = "peidasso";
 	ft_memset(p, 'j', 5);
-	printf("%c", p);
+	printf("%s", p);
 	return (0);
 }
