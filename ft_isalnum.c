@@ -9,9 +9,9 @@
 /*   Updated: 2024/04/08 13:15:49 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_isalpha.c"
-#include "ft_isdigit.c"
-#include <stdio.h>
+#include "ft_isalpha.c" /* using the check if its alphabet function as a library*/
+#include "ft_isdigit.c" /* using the check if its number function as a library*/
+/*#include <stdio.h>*/
 
 int ft_isalnum(char j)
 {
@@ -21,8 +21,8 @@ int ft_isalnum(char j)
 		return (0);
 }
 
-int main(void)
+/*int main(void)
 {
 	printf("%i", ft_isalnum(1));
 	return (0);
-}
+}*/
