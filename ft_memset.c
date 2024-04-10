@@ -9,8 +9,6 @@
 /*   Updated: 2024/04/08 17:11:18 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
