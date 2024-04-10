@@ -26,10 +26,10 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (p);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	p[] = "peidasso";
 	ft_memset(p, 'j', 5);
 	printf("%s", p);
 	return (0);
-}
+}*/
