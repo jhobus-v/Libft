@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhobus-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 09:40:42 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/04/15 09:41:39 by jhobus-v         ###   ########.fr       */
+/*   Created: 2024/04/15 15:58:25 by jhobus-v          #+#    #+#             */
+/*   Updated: 2024/04/15 16:44:22 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdio.h>
 
-void    ft_bzero(void *s, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-    size_t  bolsonaro;
-    
-    bolsonaro = 0;
-    unsigned char *lula = s;
-    while (bolsonaro < n)
-    {
-        lula[bolsonaro] = 0;
-        bolsonaro++;
-    }
+	char*	chad;
+	const char*	woman;
+	size_t	persona;
+
+	chad = dst;
+	woman = src;
+	persona = 0;
+	while (persona < size && woman[persona] != '\0')
+	{
+		chad[persona] = woman[persona];
+		persona++;
+	}
+	return(persona);
 }
 
-int main(void)
+int	main(void)
 {
-    char fazol[] = "Gripezinha";
-    ft_bzero(fazol, 4);
-    printf("%s", fazol);
-    return (0);
-    }
+	char	dest[20];
+	char	src[] = "testando";
+
+	printf("%ld", ft_strlcpy(dest, src, 30));
+	printf("%s", dest);
+	return (0);
+}
