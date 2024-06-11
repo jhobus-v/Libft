@@ -3,35 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhobus-v <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:42:13 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/04/22 17:47:17 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/05/20 14:35:20 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	const unsigned char	*str1;
+	const unsigned char	*str2;
+	size_t				i;
 
 	i = 0;
+	str1 = (const unsigned char *)s1;
+	str2 = (const unsigned char *)s2;
 	while (i < n)
 	{
-		if ((unsigned char *)s1[i] != (unsigned char *)s2[i])
-			return ((unsigned char *)s1[i] - (unsigned char *)s2[i]);
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	return(0);
-}
-
-int	main(void)
-{
-	char peido[] = "peido";
-	char peido2[] = "peidoo3";
-	printf("%d\n", ft_memcmp(peido, peido2, 90));
-	printf("%d", memcmp(peido, peido2, 90));
-	return(0);
+	return (0);
 }

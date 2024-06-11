@@ -3,31 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhobus-v <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 14:55:27 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/06 15:50:03 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/11 17:14:24 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_calloc.c"
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	char*	maloqueiro;
-	char	starti;
+	char	*maloqueiro;
 
 	i = 0;
 	j = 0;
-	maloqueiro = calloc(len, sizeof(char));
-	starti = (char) start;
+	maloqueiro = ft_calloc(len + 1, sizeof(char));
 	while (s[i])
 	{
-		while (s[i] != starti)
+		while (i < start)
 			i++;
-		if (s[i] == starti)
+		if (i == start)
 		{
 			while (j < len && s[i + j] != '\0')
 			{

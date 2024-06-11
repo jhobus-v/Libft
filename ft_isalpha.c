@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhobus-v <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 12:14:26 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/04/08 12:43:07 by jhobus-v         ###   ########.fr       */
+/*   Created: 2024/05/20 11:42:22 by jhobus-v          #+#    #+#             */
+/*   Updated: 2024/05/20 13:00:54 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(char b)
+#include "libft.h"
+
+int	ft_isalpha(int c)
 {
-	if ((b >= 65 && b <= 90) || (b >= 97 && b <= 122))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
-	else
-		return (0);
+	return (0);
 }
-
-/*int main(void)
-{
-	printf("%i",ft_isalpha('2'));
-	return(0);
-}*/
-

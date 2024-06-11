@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 11:00:12 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 14:41:04 by jhobus-v         ###   ########.fr       */
+/*   Created: 2024/05/20 16:29:53 by jhobus-v          #+#    #+#             */
+/*   Updated: 2024/05/20 16:37:34 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *str1, const void *str2, size_t n)
+void ft_putstr_fd(char *s, int fd)
 {
-	unsigned char		*gugu;
-	const unsigned char	*gaga;
-	size_t				penis;
+	int	i;
 
-	penis = 0;
-	gugu = str1;
-	gaga = str2;
-	if (gugu == NULL && gaga == NULL)
-		return (NULL);
-	if (gugu > gaga)
-		while (n--)
-			gugu[n] = gaga[n];
-	else
-		ft_memcpy(gugu, gaga, n);
-	return (gugu);
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 }

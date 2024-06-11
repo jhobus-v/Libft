@@ -1,30 +1,61 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 15:48:47 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 15:03:32 by jhobus-v         ###   ########.fr       */
+/*   Created: 2024/05/20 15:07:52 by jhobus-v          #+#    #+#             */
+/*   Updated: 2024/05/20 16:05:31 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *a)
+int	mallocsize(int shelf)
 {
 	int	i;
 
 	i = 0;
-	while (a[i] != '\0')
+	while (shelf != 0)
+	{
+		shelf /= 10;
 		i++;
+	}
 	return (i);
 }
 
-/*int	main(void)
+char *ft_itoa(int n)
 {
-	char* str = "teste";
-	printf("%i", ft_strlen(str));
+	char	*maloqueiro;
+	char	*narray;
+	int		i;
+
+	narray = "0123456789";
+	i = mallocsize(n);
+	if (n == 0)
+		return ("0");
+	i--;
+	if (n < 0)
+		i++;
+	maloqueiro = ft_calloc(i , sizeof(int));
+	if (n < 0)
+	{
+		maloqueiro[0] = '-';
+		n *= -1;
+	}
+	while (n != 0)
+	{
+		maloqueiro[i] = narray[n%10];
+		n /= 10;
+		i--;
+	}
+	return (maloqueiro);
+}
+
+int	main(void)
+{
+	int	n = -15;
+	printf("%s", ft_itoa(n));
 	return (0);
-}*/
+}

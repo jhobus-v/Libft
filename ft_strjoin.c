@@ -1,36 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 15:35:44 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 14:46:54 by jhobus-v         ###   ########.fr       */
+/*   Created: 2024/05/13 12:46:03 by jhobus-v          #+#    #+#             */
+/*   Updated: 2024/05/20 15:02:33 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
+	size_t	j;
+	char	*fusion;
 
+	fusion = malloc(sizeof(char)
+			* ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1);
+	if (!fusion)
+		return (NULL);
 	i = 0;
-	while (i < n)
+	j = 0;
+	while (s1[i])
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		fusion[i] = s1[i];
 		i++;
 	}
-	return (0);
+	while (s2[j])
+	{
+		fusion[i + j] = s2[j];
+		j++;
+	}
+	fusion[i + j] = '\0';
+	return (fusion);
 }
 
-/*int	main(void)
+/*int	main(int argc, char *argv[])
 {
-	char peido[] = "peido";
-	char peido2[] = "peidoo3";
-	printf("%d\n", ft_strncmp(peido, peido2, 90));
-	printf("%d", strncmp(peido, peido2, 90));
-	return(0);
+	if (argc == 3)
+	{
+		printf("%s", ft_strjoin(argv[1], argv[2]));
+	}
 }*/

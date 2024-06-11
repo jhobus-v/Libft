@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhobus-v <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:15:11 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/04/08 15:42:48 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/05/20 13:00:55 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(char bola)
 {

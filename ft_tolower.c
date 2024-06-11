@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhobus-v <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 16:23:09 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/04/20 16:38:08 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/05/20 14:51:15 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;
 	return (c);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	printf("%c", ft_tolower('A'));
 	return (0);
-}
+}*/

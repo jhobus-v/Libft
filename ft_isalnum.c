@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhobus-v <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 12:44:06 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/04/08 13:15:49 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/05/20 13:13:26 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_isalpha.c" /* using the check if its alphabet function as a library*/
-#include "ft_isdigit.c" /* using the check if its number function as a library*/
-/*#include <stdio.h>*/
 
-int ft_isalnum(char j)
+#include "libft.h"
+
+int	ft_isalnum(char j)
 {
 	if (ft_isalpha(j) || ft_isdigit(j))
 		return (1);

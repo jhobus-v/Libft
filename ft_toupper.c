@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhobus-v <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 15:55:20 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/04/20 16:11:29 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/05/20 14:51:13 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*#include "libft.h"*/
-#include <stdio.h>
 
-int toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
 	if (c <= 'z' && c >= 'a')
 		c -= 32;
 	return (c);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	printf("%c", toupper('h'));
 	return(0);
-}
+}*/

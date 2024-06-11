@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 15:35:44 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 14:46:54 by jhobus-v         ###   ########.fr       */
+/*   Created: 2024/05/13 14:34:18 by jhobus-v          #+#    #+#             */
+/*   Updated: 2024/05/20 15:01:19 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
+	size_t	f;
+	char	*trimmed;
 
 	i = 0;
-	while (i < n)
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+	f = ft_strlen(s1) - 1;
+	while (ft_strchr(set, s1[i]) && i <= f)
 		i++;
-	}
-	return (0);
+	if (i > f)
+		return (NULL);
+	while (ft_strchr(set, s1[f]) && f >= 0)
+		f--;
+	trimmed = ft_calloc((f - i) + 1, sizeof(char));
+	ft_strlcpy(trimmed, &s1[i], f - i + 1);
+	return (trimmed);
 }
 
-/*int	main(void)
+/*int	main(int argc, char *argv[])
 {
-	char peido[] = "peido";
-	char peido2[] = "peidoo3";
-	printf("%d\n", ft_strncmp(peido, peido2, 90));
-	printf("%d", strncmp(peido, peido2, 90));
-	return(0);
+	if (argc == 3)
+	{
+		printf("%s", ft_strtrim(argv[1], argv[2]));
+	}
 }*/
