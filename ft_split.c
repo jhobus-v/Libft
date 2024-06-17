@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 12:33:06 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/06/11 17:13:21 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 11:09:28 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ int	count_words(char const *string, char delimiter)
 	return (words);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
 	int		camisa;
-	char**	gaveta;
+	char	**gaveta;
 
 	gaveta = ft_calloc(count_words(s, c), sizeof(char *));
 	j = 0;
@@ -60,14 +60,14 @@ char **ft_split(char const *s, char c)
 	return (gaveta);
 }
 
-int	main(int argc, char **argv)
+/*int	main(int argc, char **argv)
 {
 	char **teste;
 	(void)argc;
 
 	teste = ft_split(argv[1], ' ');
 	printf("%s\n", teste[0]);
-}
+}*/
 
 /*
 	int	i = 0;

@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:34:18 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 15:01:19 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 13:35:19 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	f;
+	int		i;
+	int		f;
 	char	*trimmed;
 
 	i = 0;

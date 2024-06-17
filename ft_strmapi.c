@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 15:29:57 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/06/11 12:30:14 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 11:08:07 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	i = 0;
 	if (!s)
-		return(ft_strdup(""));
+		return (ft_strdup(""));
 	calloqueiro = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	while (s[i])
 	{

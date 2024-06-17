@@ -6,27 +6,39 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 11:00:12 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 14:41:04 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 13:35:14 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *str1, const void *str2, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	unsigned char		*gugu;
-	const unsigned char	*gaga;
-	size_t				penis;
+	char	*s;
+	char	*d;
+	size_t	i;
 
-	penis = 0;
-	gugu = str1;
-	gaga = str2;
-	if (gugu == NULL && gaga == NULL)
-		return (NULL);
-	if (gugu > gaga)
-		while (n--)
-			gugu[n] = gaga[n];
+	s = (char *)src;
+	d = (char *)dst;
+	i = 0;
+	if (d > s)
+	{
+		while (n-- > 0)
+			d[n] = s[n];
+	}
 	else
-		ft_memcpy(gugu, gaga, n);
-	return (gugu);
+	{
+		while (i < n)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	return (dst);
 }
+
+/*int	main(void)
+{
+	ft_memmove("penis", "tenis", 3);
+	return (0);
+}*/

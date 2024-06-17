@@ -6,13 +6,13 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:33:29 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 13:00:57 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 13:36:02 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char jota)
+int	ft_isprint(int jota)
 {
 	if ((jota >= 0 && jota <= 31) || (jota == 127))
 		return (0);

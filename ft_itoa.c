@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 15:07:52 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 16:05:31 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 11:49:18 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	mallocsize(int shelf)
 	return (i);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*maloqueiro;
 	char	*narray;
@@ -38,7 +38,7 @@ char *ft_itoa(int n)
 	i--;
 	if (n < 0)
 		i++;
-	maloqueiro = ft_calloc(i , sizeof(int));
+	maloqueiro = ft_calloc(i, sizeof(int));
 	if (n < 0)
 	{
 		maloqueiro[0] = '-';
@@ -46,16 +46,16 @@ char *ft_itoa(int n)
 	}
 	while (n != 0)
 	{
-		maloqueiro[i] = narray[n%10];
+		maloqueiro[i] = narray[n % 10];
 		n /= 10;
 		i--;
 	}
 	return (maloqueiro);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	n = -15;
 	printf("%s", ft_itoa(n));
 	return (0);
-}
+}*/

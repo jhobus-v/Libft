@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 11:30:16 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/27 16:57:26 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 13:33:21 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,16 @@
 //INT 
 int		ft_strlen(const char *a);
 int		ft_isalpha(int c);
-int		ft_isalnum(char j);
-int		ft_isascii(char bola);
+int		ft_isalnum(int j);
+int		ft_isascii(int bola);
 int		ft_isdigit(int a);
-int		ft_isprint(char jota);
+int		ft_isprint(int jota);
 int		ft_atoi(const char *str);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+char	**ft_split(char const *s, char c);
 
 //VOID
 void	ft_bzero(void *s, size_t n);
