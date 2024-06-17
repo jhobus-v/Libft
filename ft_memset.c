@@ -6,31 +6,29 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 16:20:37 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 14:43:25 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 19:23:12 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int l, size_t n)
 {
-	unsigned int	gugu;
-	unsigned char	*p;
+	unsigned char	*c;
 
-	p = s;
-	gugu = 0;
-	while (gugu < n && p[gugu] != '\0')
+	c = s;
+	while (n > 0)
 	{
-		p[gugu] = (unsigned char)c;
-		gugu++;
+		c[n - 1] = l;
+		n--;
 	}
-	return (p);
+	return (s);
 }
 
 /*int	main(void)
 {
-	char	p[] = "peidasso";
-	ft_memset(p, 'j', 5);
-	printf("%s", p);
+	char	p[] = "gorfada";
+	ft_memset(p, 'j', 1);
+	printf("%s\n", p);
 	return (0);
 }*/

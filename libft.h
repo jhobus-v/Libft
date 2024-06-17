@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 11:30:16 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/06/17 13:33:21 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 18:04:54 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 # include <stdio.h>
 # include <stddef.h>
 
+size_t	ft_strlen(const char *a);
 //INT 
-int		ft_strlen(const char *a);
 int		ft_isalpha(int c);
 int		ft_isalnum(int j);
 int		ft_isascii(int bola);

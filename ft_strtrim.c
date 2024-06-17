@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:34:18 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/06/17 13:35:19 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 19:21:05 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		f;
 	char	*trimmed;
 
+	if (s1 == NULL)
+		return (NULL);
+	if (set == NULL)
+		return (ft_strdup(s1));
 	i = 0;
 	f = ft_strlen(s1) - 1;
-	while (ft_strchr(set, s1[i]) && i <= f)
+	while (ft_strchr(set, s1[i]) && s1[i])
 		i++;
-	if (i > f)
-		return (NULL);
-	while (ft_strchr(set, s1[f]) && f >= 0)
+	if ((i - 1) == f)
+		return (ft_strdup(""));
+	while (ft_strchr(set, s1[f]) && s1[f])
 		f--;
-	trimmed = ft_calloc((f - i) + 1, sizeof(char));
-	ft_strlcpy(trimmed, &s1[i], f - i + 1);
+	trimmed = ft_substr(s1, i, f - i + 1);
 	return (trimmed);
 }
 

@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:35:44 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 14:46:54 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 19:20:59 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,19 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n)
+	while ((i < (n - 1)) && s1[i] != '\0')
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+			break ;
 		i++;
 	}
-	return (0);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 /*int	main(void)
 {
-	char peido[] = "peido";
-	char peido2[] = "peidoo3";
-	printf("%d\n", ft_strncmp(peido, peido2, 90));
-	printf("%d", strncmp(peido, peido2, 90));
+	char teste1[] = "nega";
+	char teste2[] = "eggmannega";
+	printf("%d\n", ft_strncmp(teste1, teste2, 5));
 	return(0);
 }*/

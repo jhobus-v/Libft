@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 11:00:12 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/06/17 13:35:14 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 19:23:10 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	char	*d;
 	size_t	i;
 
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	s = (char *)src;
 	d = (char *)dst;
 	i = 0;
@@ -39,6 +41,6 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 
 /*int	main(void)
 {
-	ft_memmove("penis", "tenis", 3);
+	ft_memmove("menis", "tenis", 3);
 	return (0);
 }*/

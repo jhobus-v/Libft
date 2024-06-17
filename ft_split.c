@@ -6,31 +6,29 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 12:33:06 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/06/17 11:09:28 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 19:22:25 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *string, char delimiter)
+static int	count_words(char const *string, char delimiter)
 {
 	int	words;
 	int	i;
 
 	i = 0;
 	words = 0;
-	while (string[i] == delimiter)
-		i++;
 	while (string[i])
 	{
-		if (string[i] != delimiter)
+		while (string[i] == delimiter)
+			i++;
+		if (string[i])
 		{
 			words++;
 			while (string[i] != delimiter && string[i])
 				i++;
 		}
-		while (string[i] == delimiter)
-			i++;
 	}
 	return (words);
 }
@@ -42,9 +40,10 @@ char	**ft_split(char const *s, char c)
 	int		camisa;
 	char	**gaveta;
 
-	gaveta = ft_calloc(count_words(s, c), sizeof(char *));
+	gaveta = ft_calloc(count_words(s, c) + 1, sizeof(char *));
+	if (!gaveta)
+		return (NULL);
 	j = 0;
-	i = 0;
 	camisa = 0;
 	while (s[j])
 	{
@@ -68,24 +67,3 @@ char	**ft_split(char const *s, char c)
 	teste = ft_split(argv[1], ' ');
 	printf("%s\n", teste[0]);
 }*/
-
-/*
-	int	i = 0;
-	mlc = ft_calloc(palavra, sizeof(char *))
-
-	if (letra)
-		palavra++;
-		while (== letra)
-			++;
-		while (== spaco || tab)
-			++;
-		
-	while (mlc[i])
-	{
-		mlc[i] = ft_calloc(ft_strlen("eu") + 1, sizeof(char));
-		while (j < ft_strlen("eu"))
-		{
-			mlc[i][j] = str[j];
-			j++;
-		}
-	}*/

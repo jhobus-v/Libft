@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 19:50:24 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 14:55:21 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 18:23:28 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 0;
-	string = ft_calloc(ft_strlen((char *)s), sizeof(char));
-	while (s[i])
+	string = ft_calloc(ft_strlen((char *)s) + 1, sizeof(char));
+	if (!string)
+		return (NULL);
+	while (s[i] != '\0')
 	{
 		string[i] = s[i];
 		i++;
@@ -29,8 +31,6 @@ char	*ft_strdup(const char *s)
 
 /*int	main(int argc, char **argv)
 {
-	if (argc == 2)
-	{
-		printf("%s\n", ft_strdup(argv[1]));
-	}
+	(void)argc;
+	printf("%s\n", ft_strdup(argv[1]));
 }*/

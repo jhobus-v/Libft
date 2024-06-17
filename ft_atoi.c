@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 16:52:42 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 13:00:51 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 16:52:28 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,25 +18,21 @@ int	ft_atoi(const char *str)
 	int	n;
 	int	signal;
 
-	i = -1;
+	i = 0;
 	n = 0;
 	signal = 1;
-	while (str[++i])
+	while ((str[i] <= 13 && str[i] >= 9) || str[i] == 32)
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		while (str[i] < 48 || str[i] > 57)
-		{
-			if (n != 0)
-				return (n);
-			if (ft_isalpha(str[i]))
-				return (0);
-			if ((str[i] == '+' || str[i] == '-')
-				&& (str[i + 1] == '+' || str[i + 1] == '-'))
-				return (0);
-			if (str[i] == '-')
-				signal *= -1;
-			i++;
-		}
+		if (str[i] == '-')
+			signal *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
 		n = n * 10 + (str[i] - 48);
+		i++;
 	}
 	return (n * signal);
 }

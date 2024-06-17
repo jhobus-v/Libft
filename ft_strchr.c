@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 16:39:08 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 13:01:13 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 19:22:06 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strchr(const char *s, int c)
 
 /*int	main(void)
 {
-	char	*teste = "peido";
+	char	*teste = "brinquedo";
 
 	printf("%s\n", teste);
 	teste = ft_strchr(teste, 'i');

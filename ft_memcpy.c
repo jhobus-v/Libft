@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 09:42:27 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 14:39:55 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 19:23:19 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 /*int main(void)
 {
-  char source[] = "penis";
+  char source[] = "bums";
   size_t source_size = 0;
   while(source[source_size] != '\0')
   {

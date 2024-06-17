@@ -6,13 +6,13 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:48:47 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/05/20 15:03:32 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/17 19:15:46 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *a)
+size_t	ft_strlen(const char *a)
 {
 	int	i;
 
