@@ -6,7 +6,7 @@
 /*   By: jhobus-v <jhobus-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 09:42:27 by jhobus-v          #+#    #+#             */
-/*   Updated: 2024/06/17 19:23:19 by jhobus-v         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:32:25 by jhobus-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char			*destination;
 	const unsigned char		*copied;
 
+	if (!dest && !src)
+		return (0);
 	pepe = 0;
 	destination = dest;
 	copied = src;
