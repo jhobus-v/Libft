@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
-	if (little == NULL || little[0] == '\0')
+	if (little[0] == '\0')
 		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{
@@ -46,3 +46,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
         printf("meu:%s\n", ft_strnstr(big, small, 8));
         return (0);
 }*/
+
+/* put this after the first if 
+if you get it wrong on a tester! little == NULL ||*/
